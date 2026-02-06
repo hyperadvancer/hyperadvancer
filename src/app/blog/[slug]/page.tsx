@@ -74,7 +74,7 @@ export default async function BlogPost({ params }: Props) {
             </div>
           </header>
 
-          <div className="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
+          <div className="prose prose-lg prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
             <MDXRemote source={post.content} />
           </div>
         </article>

@@ -9,7 +9,15 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <Section className="pt-24 md:pt-32 pb-16 md:pb-24">
+      <Section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+        {/* Subtle gradient backdrop */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10"
+        >
+          <div className="absolute -top-24 -right-24 h-[500px] w-[500px] rounded-full bg-primary/[0.04] blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-primary-light/[0.06] blur-3xl" />
+        </div>
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-light mb-4">
             Healthcare Innovation &amp; AI Advisory
