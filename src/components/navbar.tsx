@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -21,9 +22,10 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-b-accent/40 bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight text-primary">
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-primary">
+          <Image src="/h-mark.png" width={28} height={28} alt="" className="rounded" />
           Hyperadvancer
         </Link>
 
@@ -47,7 +49,7 @@ export function Navbar() {
             <ThemeToggle />
           </li>
           <li className="ml-1">
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="border-l-2 border-l-accent">
               <Link href="/contact">Get in Touch</Link>
             </Button>
           </li>
@@ -64,7 +66,8 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
-              <SheetTitle className="text-lg font-bold text-primary">
+              <SheetTitle className="flex items-center gap-2 text-lg font-bold text-primary">
+                <Image src="/h-mark.png" width={24} height={24} alt="" className="rounded" />
                 Hyperadvancer
               </SheetTitle>
               <nav className="mt-8 flex flex-col gap-1">

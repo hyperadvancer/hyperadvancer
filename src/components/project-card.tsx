@@ -2,9 +2,15 @@ import Link from "next/link";
 import {
   ArrowUpRight,
   Calendar,
-  Shuffle,
+  Compass,
+  GraduationCap,
   HeartPulse,
+  Leaf,
+  Lightbulb,
+  Network,
   Rocket,
+  Shuffle,
+  Stethoscope,
   type LucideIcon,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -18,9 +24,15 @@ import {
 
 const iconMap: Record<string, LucideIcon> = {
   Calendar,
-  Shuffle,
+  Compass,
+  GraduationCap,
   HeartPulse,
+  Leaf,
+  Lightbulb,
+  Network,
   Rocket,
+  Shuffle,
+  Stethoscope,
 };
 
 export interface Project {
@@ -45,7 +57,7 @@ function CardInner({
   return (
     <Card
       className={`h-full transition-shadow hover:shadow-lg ${
-        highlight ? "border-primary/30 bg-primary/[0.02]" : ""
+        highlight ? "border-accent/30 bg-primary/[0.02]" : ""
       }`}
     >
       {IconComponent && (

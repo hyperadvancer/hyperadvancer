@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -35,8 +36,9 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="text-lg font-bold tracking-tight text-primary"
+              className="flex items-center gap-2 text-lg font-bold tracking-tight text-primary"
             >
+              <Image src="/h-mark.png" width={24} height={24} alt="" className="rounded" />
               Hyperadvancer
             </Link>
             <p className="mt-1 text-sm text-muted-foreground">

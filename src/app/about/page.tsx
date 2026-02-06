@@ -151,18 +151,19 @@ export default function About() {
               15 teams in just 10 days.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Currently, I&apos;m focused on the{" "}
+              Currently, I&apos;m focused on automation strategies, new business
+              models and the{" "}
               <strong>longevity economy</strong> — the companies, conferences, and
               communities shaping the future of healthspan. I run the{" "}
               <a
                 href="https://longevents.hyperadvancer.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline"
+                className="text-primary hover:underline decoration-accent/70 underline-offset-2"
               >
                 Longevity Events Calendar
               </a>
-              , a curated database of 250+ longevity conferences worldwide.
+              , a curated database of 300+ longevity conferences worldwide.
             </p>
           </div>
           <div className="flex-shrink-0 mx-auto md:mx-0">

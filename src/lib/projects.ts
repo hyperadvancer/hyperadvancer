@@ -26,11 +26,53 @@ export const projects: Project[] = [
     icon: "HeartPulse",
   },
   {
-    title: "CM Insurance — AI Skunkworks",
+    title: "Major Health Insurer — AI Innovation Lab",
     description:
-      "Designed CMX, a skunkworks-like innovation department for Belgium's largest health insurer (4.5M members). Two-track approach: rapid 4-week experiment sprints for prototyping, plus a studio track for training internal teams, building an AI app store, and running hackathons. CM already deploys AI at scale; CMX adds innovation velocity.",
+      "Designed a skunkworks-style innovation unit for one of Europe's largest health insurers. Two-track approach: rapid 4-week experiment sprints for prototyping, plus a studio track for training internal teams, building an AI app store, and running hackathons. The insurer already deploys AI at scale; the innovation lab adds velocity and structured experimentation.",
     tags: ["AI Strategy", "Insurance", "Enterprise", "Skunkworks"],
     icon: "Rocket",
+  },
+  {
+    title: "Accelerating Digital Health Innovation",
+    description:
+      "Co-founded HealthStartup and launched five landmark European digital health accelerator events, building the EU's first dedicated digital health innovation community. Connected startups with corporates, clinicians, and policymakers to fast-track collaboration and venture creation.",
+    tags: ["Digital Health", "Accelerator", "Community", "Events"],
+    icon: "Stethoscope",
+  },
+  {
+    title: "Reviving Healthcare Networks",
+    description:
+      "Revitalised a large healthcare provider network through new event formats — Pilots tables, Transformer Summit, DEBBI, and Health Arena concepts. Successfully pivoted all formats to virtual delivery within weeks when COVID-19 struck, maintaining community engagement and strategic momentum.",
+    tags: ["Healthcare", "Networks", "Events", "COVID Pivot"],
+    icon: "Network",
+  },
+  {
+    title: "Strategic Innovation Guidance",
+    description:
+      "Advisory engagements spanning government, corporate, and hospital sectors: delivered IPCEI funding strategy to the Flemish government, reimagined McKesson's pharmacy services, transformed hospital spaces in Antwerp, and facilitated shark-tank innovation events for major pharmaceutical companies.",
+    tags: ["Advisory", "Strategy", "Government", "Pharma"],
+    icon: "Compass",
+  },
+  {
+    title: "GitLab Innovation Launchpad",
+    description:
+      "Created GitLab's inaugural Pitch Innovation Competition, establishing a structured framework for teams to surface, validate, and prototype new offerings. Elevated platform quality, expanded the component catalogue, and strengthened community engagement through competitive innovation.",
+    tags: ["Innovation", "Enterprise", "DevOps", "Competition"],
+    icon: "Lightbulb",
+  },
+  {
+    title: "Generative AI Bootcamp",
+    description:
+      "Intensive training programme for large corporate teams covering practical generative AI capabilities, process analysis, prompt engineering, and responsible deployment strategies. Delivered tailored workshops and strategic guidance enabling rapid adoption and immediate operational improvements.",
+    tags: ["Generative AI", "Training", "Workshop", "Enterprise"],
+    icon: "GraduationCap",
+  },
+  {
+    title: "Wellness Market Strategy",
+    description:
+      "Comprehensive market research and trend analysis for a stealth hospitality startup assessing growth potential across fitness, wellness, and longevity markets. Delivered an actionable business development roadmap with positioning, competitive landscape, and targeted market entry strategies.",
+    tags: ["Strategy", "Wellness", "Market Research", "Longevity"],
+    icon: "Leaf",
   },
 ];
 
