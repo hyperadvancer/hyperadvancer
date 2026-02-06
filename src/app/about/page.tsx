@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -87,51 +88,63 @@ export default function About() {
           <div className="absolute -top-24 -right-24 h-[500px] w-[500px] rounded-full bg-primary/[0.04] blur-3xl" />
           <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-primary-light/[0.06] blur-3xl" />
         </div>
-        <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary-light mb-4">
-            About
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]">
-            Bart Collet
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            I&apos;m a healthcare innovation catalyst based in Antwerp, Belgium.
-            For over 30 years, I&apos;ve been transforming complex healthcare
-            challenges into scalable solutions — blending healthcare insight,
-            cross-industry creativity, and relentless execution.
-          </p>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            For a quarter of a century, I managed{" "}
-            <strong>Huis Vandecruys</strong>, a 72-resident elderly care
-            facility with 50 staff members, pioneering operational excellence
-            and compassionate care delivery. That frontline experience gives me
-            unique credibility with both clinicians and C-suite executives.
-          </p>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            As a digital builder, I created{" "}
-            <strong>JPLAN</strong> (2003) — a web-based healthcare staff
-            scheduling tool — and <strong>CALBLOX</strong> (2013), a
-            tablet-optimised task management platform for healthcare workers.
-            I&apos;ve orchestrated five international digital health events,
-            conducted four public hackathons launching seven successful
-            companies, and led{" "}
-            <strong>VR4Rehab&apos;s international virtual hackathon</strong> with
-            15 teams in just 10 days.
-          </p>
-          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            Currently, I&apos;m focused on the{" "}
-            <strong>longevity economy</strong> — the companies, conferences, and
-            communities shaping the future of healthspan. I run the{" "}
-            <a
-              href="https://longevents.hyperadvancer.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Longevity Events Calendar
-            </a>
-            , a curated database of 250+ longevity conferences worldwide.
-          </p>
+        <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-16">
+          <div className="flex-1 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary-light mb-4">
+              About
+            </p>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]">
+              Bart Collet
+            </h1>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              I&apos;m a healthcare innovation catalyst based in Antwerp, Belgium.
+              For over 30 years, I&apos;ve been transforming complex healthcare
+              challenges into scalable solutions — blending healthcare insight,
+              cross-industry creativity, and relentless execution.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              For a quarter of a century, I managed{" "}
+              <strong>Huis Vandecruys</strong>, a 72-resident elderly care
+              facility with 50 staff members, pioneering operational excellence
+              and compassionate care delivery. That frontline experience gives me
+              unique credibility with both clinicians and C-suite executives.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              As a digital builder, I created{" "}
+              <strong>JPLAN</strong> (2003) — a web-based healthcare staff
+              scheduling tool — and <strong>CALBLOX</strong> (2013), a
+              tablet-optimised task management platform for healthcare workers.
+              I&apos;ve orchestrated five international digital health events,
+              conducted four public hackathons launching seven successful
+              companies, and led{" "}
+              <strong>VR4Rehab&apos;s international virtual hackathon</strong> with
+              15 teams in just 10 days.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              Currently, I&apos;m focused on the{" "}
+              <strong>longevity economy</strong> — the companies, conferences, and
+              communities shaping the future of healthspan. I run the{" "}
+              <a
+                href="https://longevents.hyperadvancer.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Longevity Events Calendar
+              </a>
+              , a curated database of 250+ longevity conferences worldwide.
+            </p>
+          </div>
+          <div className="flex-shrink-0 mx-auto md:mx-0">
+            <Image
+              src="/headshot.jpeg"
+              alt="Bart Collet"
+              width={280}
+              height={350}
+              className="rounded-2xl shadow-lg object-cover"
+              priority
+            />
+          </div>
         </div>
       </Section>
 
