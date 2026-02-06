@@ -21,7 +21,7 @@ export default function Blog() {
       />
 
       {posts.length === 0 ? (
-        <div className="rounded-lg border bg-white p-12 text-center">
+        <div className="rounded-lg border bg-card p-12 text-center">
           <p className="text-muted-foreground text-lg">
             Posts are on their way. Check back soon.
           </p>
@@ -32,7 +32,7 @@ export default function Blog() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group block rounded-lg border bg-white p-6 hover:shadow-md transition-shadow"
+              className="group block rounded-lg border bg-card p-6 hover:shadow-md transition-shadow"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
                 <div>

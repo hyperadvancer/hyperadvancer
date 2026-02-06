@@ -45,7 +45,8 @@ export default function Home() {
       </Section>
 
       {/* Differentiators */}
-      <Section className="bg-white border-y">
+      <Section className="bg-card border-y">
+        <h2 className="sr-only">Why work with me</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {

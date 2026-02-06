@@ -29,7 +29,7 @@ const social = [
 
 export function Footer() {
   return (
-    <footer className="border-t bg-white">
+    <footer className="border-t bg-card">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-10">
           <div>

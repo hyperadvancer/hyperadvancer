@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -20,7 +21,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="text-xl font-bold tracking-tight text-primary">
           Hyperadvancer
@@ -42,7 +43,10 @@ export function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="ml-2">
+          <li className="ml-1">
+            <ThemeToggle />
+          </li>
+          <li className="ml-1">
             <Button asChild size="sm">
               <Link href="/contact">Get in Touch</Link>
             </Button>
@@ -50,40 +54,43 @@ export function Navbar() {
         </ul>
 
         {/* Mobile nav */}
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-72">
-            <SheetTitle className="text-lg font-bold text-primary">
-              Hyperadvancer
-            </SheetTitle>
-            <nav className="mt-8 flex flex-col gap-1">
-              {links.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className={`px-3 py-2 rounded-md text-base font-medium transition-colors hover:text-primary ${
-                    pathname === href
-                      ? "text-primary bg-primary/5"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {label}
-                </Link>
-              ))}
-              <Button asChild className="mt-4">
-                <Link href="/contact" onClick={() => setOpen(false)}>
-                  Get in Touch
-                </Link>
+        <div className="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle menu</span>
               </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-72">
+              <SheetTitle className="text-lg font-bold text-primary">
+                Hyperadvancer
+              </SheetTitle>
+              <nav className="mt-8 flex flex-col gap-1">
+                {links.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className={`px-3 py-2 rounded-md text-base font-medium transition-colors hover:text-primary ${
+                      pathname === href
+                        ? "text-primary bg-primary/5"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                ))}
+                <Button asChild className="mt-4">
+                  <Link href="/contact" onClick={() => setOpen(false)}>
+                    Get in Touch
+                  </Link>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </nav>
     </header>
   );

@@ -12,6 +12,32 @@ export const metadata: Metadata = {
     "Bart Collet — healthcare innovation catalyst with 30+ years of experience transforming complex healthcare challenges into scalable solutions.",
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Bart Collet",
+  url: "https://hyperadvancer.com",
+  image: "https://hyperadvancer.com/headshot.jpeg",
+  jobTitle: "Healthcare Innovation Catalyst",
+  worksFor: {
+    "@type": "Organization",
+    name: "Hyperadvancer",
+    url: "https://hyperadvancer.com",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/bartcollet/",
+    "https://x.com/bartcollet",
+  ],
+  knowsAbout: [
+    "AI & Machine Learning",
+    "Innovation Strategy",
+    "Digital Health",
+    "Longevity Science",
+    "Data Engineering",
+    "Healthcare Technology",
+  ],
+};
+
 const services = [
   {
     name: "Innovation Flash-Diagnosis",
@@ -79,6 +105,10 @@ const expertise = [
 export default function About() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* Hero */}
       <Section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
         <div
@@ -149,7 +179,7 @@ export default function About() {
       </Section>
 
       {/* Expertise */}
-      <Section className="bg-white border-y py-12">
+      <Section className="bg-card border-y py-12">
         <div className="flex flex-wrap gap-3">
           {expertise.map((skill) => (
             <Badge
@@ -197,7 +227,7 @@ export default function About() {
       </Section>
 
       {/* Advisory Boards */}
-      <Section className="bg-white border-y">
+      <Section className="bg-card border-y">
         <SectionHeader title="Advisory & Speaking" />
         <p className="text-muted-foreground leading-relaxed max-w-3xl">
           I serve on advisory boards including{" "}
@@ -222,7 +252,7 @@ export default function About() {
           {services.map(({ name, duration, description }) => (
             <div
               key={name}
-              className="rounded-lg border bg-white p-5 hover:shadow-sm transition-shadow"
+              className="rounded-lg border bg-card p-5 hover:shadow-sm transition-shadow"
             >
               <h3 className="font-semibold text-sm mb-1">{name}</h3>
               <p className="text-xs text-primary-light font-medium mb-2">
@@ -237,7 +267,7 @@ export default function About() {
       </Section>
 
       {/* CTA */}
-      <Section className="bg-white border-y">
+      <Section className="bg-card border-y">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold">Interested in working together?</h2>
           <p className="mt-4 text-muted-foreground">

@@ -51,7 +51,8 @@ export default function Contact() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-4 rounded-lg border bg-white p-5 hover:shadow-md transition-shadow group"
+              aria-label={`Contact via ${label}`}
+              className="flex items-center gap-4 rounded-lg border bg-card p-5 hover:shadow-md transition-shadow group"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                 <Icon className="h-5 w-5 text-primary" />

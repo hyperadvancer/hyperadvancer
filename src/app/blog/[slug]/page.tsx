@@ -39,8 +39,32 @@ export default async function BlogPost({ params }: Props) {
 
   if (!post) notFound();
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Bart Collet",
+      url: "https://hyperadvancer.com/about",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Hyperadvancer",
+      url: "https://hyperadvancer.com",
+    },
+    url: `https://hyperadvancer.com/blog/${slug}`,
+    keywords: post.tags,
+  };
+
   return (
     <Section className="pt-24 md:pt-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="max-w-3xl mx-auto">
         <Link
           href="/blog"
@@ -74,7 +98,7 @@ export default async function BlogPost({ params }: Props) {
             </div>
           </header>
 
-          <div className="prose prose-lg prose-slate max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
+          <div className="prose prose-lg prose-slate dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
             <MDXRemote source={post.content} />
           </div>
         </article>
