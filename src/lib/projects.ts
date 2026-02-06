@@ -4,29 +4,29 @@ export const projects: Project[] = [
   {
     title: "Longevity Events Calendar",
     description:
-      "A curated, searchable calendar of 200+ longevity, healthspan, and biotech conferences worldwide. Built with Next.js, Supabase, and AI-powered data enrichment pipelines that classify speakers, sponsors, and session tracks automatically.",
+      "The definitive longevity event platform featuring 250+ global events focused on active ageing, prevention, fitness, wellness, and healthspan optimisation. AI-powered data enrichment classifies speakers, sponsors, and session tracks automatically. Transitioning from a marketing tool to a standalone revenue stream with quarterly trend reports.",
     tags: ["Next.js", "Supabase", "AI/ML", "Data Pipeline"],
     href: "https://longevents.hyperadvancer.com",
     highlight: true,
   },
   {
-    title: "Innovation Roulette",
+    title: "Innovation Ecosystem Roulette",
     description:
-      "An interactive ideation tool that generates random innovation prompts by combining emerging technologies with real-world industries. Designed to break creative blocks and spark unconventional thinking in workshops and strategy sessions.",
-    tags: ["React", "Creativity", "Workshop Tool"],
-    href: "https://innovationroulette.com",
+      "An AI-powered platform that identifies novel partnership opportunities by connecting seemingly unrelated businesses. Users input their company; the system spins through 100+ companies across healthcare, fitness, wellness, and biotech — generating tailored collaboration proposals with confidence scores and implementation steps.",
+    tags: ["AI", "Matchmaking", "Lead Generation"],
+    href: "https://roulette.hyperadvancer.com",
   },
   {
     title: "Healthusiasm",
     description:
-      "A health innovation platform exploring the intersection of consumer wellness, digital health, and preventative medicine. Content-driven project tracking trends in personalised health, wearables, and longevity science.",
-    tags: ["Health Tech", "Content", "Research"],
+      "A hybrid offering combining automated diagnostics with human consultancy to help organisations assess and improve their health-enthusiastic positioning. Features a readiness diagnostic tool, competitor benchmarking, and workshops — targeting the wellness market growing at 15–16% annually.",
+    tags: ["Health Tech", "Consultancy", "Diagnostics"],
   },
   {
-    title: "CM Insurance — AI Strategy",
+    title: "CM Insurance — AI Skunkworks",
     description:
-      "Led the development of a comprehensive AI strategy for a major Belgian insurance company. Mapped 40+ use cases across claims, underwriting, and customer service, prioritised by business impact and feasibility.",
-    tags: ["AI Strategy", "Insurance", "Enterprise"],
+      "Designed CMX, a skunkworks-like innovation department for Belgium's largest health insurer (4.5M members). Two-track approach: rapid 4-week experiment sprints for prototyping, plus a studio track for training internal teams, building an AI app store, and running hackathons. CM already deploys AI at scale; CMX adds innovation velocity.",
+    tags: ["AI Strategy", "Insurance", "Enterprise", "Skunkworks"],
   },
 ];
 

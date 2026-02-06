@@ -8,41 +8,57 @@ import { Section, SectionHeader } from "@/components/section";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Bart Collet — innovation strategist, AI advisor, and builder. Two decades of experience translating emerging technology into business outcomes.",
+    "Bart Collet — healthcare innovation catalyst with 30+ years of experience transforming complex healthcare challenges into scalable solutions.",
 };
 
 const services = [
   {
-    name: "AI Strategy & Roadmap",
-    description: "Map use cases, prioritise by impact/feasibility, build your AI roadmap.",
+    name: "Innovation Flash-Diagnosis",
+    duration: "2-week sprint",
+    description:
+      "Rapid outside-in assessment delivering an organisational readiness scorecard, bottleneck map, and top 3 quick wins with implementation pathways.",
   },
   {
-    name: "Innovation Sprint",
-    description: "From problem statement to validated prototype in 2–4 weeks.",
+    name: "Accelerator in-a-Box",
+    duration: "6 weeks + 1 event day",
+    description:
+      "Full hackathon format without internal capacity: concept design, speaker curation, facilitator playbook, and post-event venturing report.",
   },
   {
-    name: "Data Strategy",
-    description: "Audit your data landscape, identify quick wins, design your data platform.",
+    name: "AI Process-Automation",
+    duration: "Project-based",
+    description:
+      "Operational deep-dive, personalised automation roadmap, team training workshops, and strategic implementation guidance.",
   },
   {
-    name: "Digital Product Advisory",
-    description: "Product-market fit validation, tech stack guidance, go-to-market strategy.",
+    name: "Prototype-to-Pilot",
+    duration: "3-month agile",
+    description:
+      "Customer discovery, clickable prototype, lean business case, and pilot-site onboarding plan. From idea to MVP.",
   },
   {
-    name: "Executive Workshops",
-    description: "Half-day to full-day workshops on AI, innovation, and digital transformation.",
+    name: "Innovation Ops Interim Lead",
+    duration: "6–12 months",
+    description:
+      "Fractional or full-time innovation leadership: roadmap execution, KPI monitoring, coaching, and transition planning.",
   },
   {
-    name: "Fractional CTO / CDO",
-    description: "Part-time technology leadership for scale-ups and innovation teams.",
+    name: "Board-Level Advisor",
+    duration: "Quarterly retainer",
+    description:
+      "Quarterly trend briefings, technology and partnership scouting, speaking and PR support for boards seeking foresight.",
   },
   {
-    name: "Due Diligence & Assessment",
-    description: "Technical due diligence for investors, acquirers, and boards.",
+    name: "Cross-Industry Inspiration Safari",
+    duration: "4 weeks + 2-day workshop",
+    description:
+      "Curated case studies from non-traditional sources, partner introductions, and a translate-to-your-context workshop.",
   },
   {
-    name: "Keynote Speaking",
-    description: "Engaging talks on AI, longevity tech, innovation, and the future of work.",
+    name: "Virtual Hackathon Turbo",
+    duration: "10-day remote sprint",
+    description:
+      "Platform setup, challenge framing, daily standups, mentoring, judging, and post-event incubation follow-up.",
   },
 ];
 
@@ -53,8 +69,10 @@ const expertise = [
   "Longevity Science",
   "Data Engineering",
   "Insurance Tech",
-  "Product Management",
+  "Hackathons & Events",
   "Workshop Facilitation",
+  "Product Prototyping",
+  "Vibe Coding",
 ];
 
 export default function About() {
@@ -70,21 +88,33 @@ export default function About() {
             Bart Collet
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            I&apos;m an innovation strategist and AI advisor based in Belgium. For
-            twenty years, I&apos;ve been helping organisations — from Fortune 500
-            insurers to early-stage health tech start-ups — make better
-            decisions about technology.
+            I&apos;m a healthcare innovation catalyst based in Antwerp, Belgium.
+            For over 30 years, I&apos;ve been transforming complex healthcare
+            challenges into scalable solutions — blending healthcare insight,
+            cross-industry creativity, and relentless execution.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            My work sits at the intersection of <strong>strategy and execution</strong>.
-            I don&apos;t just write slide decks; I build things. Whether that&apos;s an
-            AI-powered data pipeline, a product prototype, or a corporate
-            innovation programme, I get my hands dirty alongside the teams I advise.
+            For a quarter of a century, I managed{" "}
+            <strong>Huis Vandecruys</strong>, a 72-resident elderly care
+            facility with 50 staff members, pioneering operational excellence
+            and compassionate care delivery. That frontline experience gives me
+            unique credibility with both clinicians and C-suite executives.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            Currently, I&apos;m particularly focused on the <strong>longevity economy</strong> —
-            the companies, conferences, and communities shaping the future of
-            healthspan and human performance. I run{" "}
+            As a digital builder, I created{" "}
+            <strong>JPLAN</strong> (2003) — a web-based healthcare staff
+            scheduling tool — and <strong>CALBLOX</strong> (2013), a
+            tablet-optimised task management platform for healthcare workers.
+            I&apos;ve orchestrated five international digital health events,
+            conducted four public hackathons launching seven successful
+            companies, and led{" "}
+            <strong>VR4Rehab&apos;s international virtual hackathon</strong> with
+            15 teams in just 10 days.
+          </p>
+          <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+            Currently, I&apos;m focused on the{" "}
+            <strong>longevity economy</strong> — the companies, conferences, and
+            communities shaping the future of healthspan. I run the{" "}
             <a
               href="https://longevents.hyperadvancer.com"
               target="_blank"
@@ -93,7 +123,7 @@ export default function About() {
             >
               Longevity Events Calendar
             </a>
-            , a curated database of 200+ longevity conferences worldwide.
+            , a curated database of 250+ longevity conferences worldwide.
           </p>
         </div>
       </Section>
@@ -120,42 +150,64 @@ export default function About() {
           <div>
             <h3 className="text-lg font-semibold mb-2">Speed</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I move fast without cutting corners. Decades of pattern recognition
-              mean I can identify the 20% of work that delivers 80% of the value —
-              and ship it first.
+              I compress months of stakeholder wrangling and product uncertainty
+              into days of decisive progress. A 10-day virtual hackathon,
+              pandemic pivots, prototype-to-pilot — I move fast without cutting
+              corners.
             </p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Credibility</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;ve been in the room — boardrooms, war rooms, server rooms.
-              I speak both business and technology fluently, which means I can
-              translate in both directions without losing signal.
+              25 years on the frontline of elderly care, plus advisory roles at
+              SXSW, ICT&amp;Health, eHealth Hub, and AI4Health. I speak both
+              clinical and commercial, translating in both directions without
+              losing signal.
             </p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Knowledge Transfer</h3>
             <p className="text-muted-foreground leading-relaxed">
-              My goal is always to work myself out of a job. Every engagement is
-              designed to leave your team more capable, not more dependent.
+              My goal is always to work myself out of a job. Every engagement
+              is designed to leave your team more capable, not more dependent.
+              I build capabilities, not consulting dependencies.
             </p>
           </div>
         </div>
       </Section>
 
-      {/* Services */}
+      {/* Advisory Boards */}
       <Section className="bg-white border-y">
+        <SectionHeader title="Advisory & Speaking" />
+        <p className="text-muted-foreground leading-relaxed max-w-3xl">
+          I serve on advisory boards including{" "}
+          <strong>SXSW</strong>, <strong>ICT&amp;Health</strong>,{" "}
+          <strong>eHealth Hub</strong>, and <strong>AI4Health</strong>,
+          providing foresight on digital health trends and emerging
+          opportunities. Past consulting clients include the Flemish government
+          (IPCEI funding), McKesson (pharmacy strategy), Coca-Cola (health and
+          nutrition innovation), UCB Pharma (Hack Epilepsy — eyeforpharma
+          Barcelona Awards 2016), and GitLab (inaugural Pitch Innovation
+          Competition).
+        </p>
+      </Section>
+
+      {/* Services */}
+      <Section>
         <SectionHeader
           title="Service Packages"
-          subtitle="Flexible engagement models from one-day workshops to ongoing advisory."
+          subtitle="Flexible engagement models — from a 2-week sprint to 12 months of fractional leadership."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map(({ name, description }) => (
+          {services.map(({ name, duration, description }) => (
             <div
               key={name}
-              className="rounded-lg border bg-background p-5 hover:shadow-sm transition-shadow"
+              className="rounded-lg border bg-white p-5 hover:shadow-sm transition-shadow"
             >
-              <h3 className="font-semibold text-sm mb-2">{name}</h3>
+              <h3 className="font-semibold text-sm mb-1">{name}</h3>
+              <p className="text-xs text-primary-light font-medium mb-2">
+                {duration}
+              </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {description}
               </p>
@@ -165,12 +217,13 @@ export default function About() {
       </Section>
 
       {/* CTA */}
-      <Section>
+      <Section className="bg-white border-y">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold">Interested in working together?</h2>
           <p className="mt-4 text-muted-foreground">
-            Whether you need a strategic sounding board, hands-on delivery
-            support, or a keynote speaker, I&apos;d love to hear from you.
+            Whether you need a strategic sounding board, a hackathon organiser,
+            hands-on delivery support, or a keynote speaker — I&apos;d love to
+            hear from you.
           </p>
           <div className="mt-6">
             <Button asChild size="lg">

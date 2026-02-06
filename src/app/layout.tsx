@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     template: "%s | Hyperadvancer",
   },
   description:
-    "Innovation strategy, AI advisory, and digital transformation. Bridging the gap between cutting-edge technology and real-world business outcomes.",
+    "Healthcare innovation catalyst with 30+ years of experience. AI advisory, hackathons, digital health strategy, and the longevity economy.",
   metadataBase: new URL("https://hyperadvancer.com"),
   openGraph: {
     title: "Hyperadvancer — Bart Collet",
     description:
-      "Innovation strategy, AI advisory, and digital transformation.",
+      "Healthcare innovation catalyst. AI advisory, hackathons, digital health, and the longevity economy.",
     url: "https://hyperadvancer.com",
     siteName: "Hyperadvancer",
     locale: "en_GB",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hyperadvancer — Bart Collet",
     description:
-      "Innovation strategy, AI advisory, and digital transformation.",
+      "Healthcare innovation catalyst. AI advisory, hackathons, digital health, and the longevity economy.",
   },
   robots: {
     index: true,

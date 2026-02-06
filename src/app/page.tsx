@@ -12,16 +12,16 @@ export default function Home() {
       <Section className="pt-24 md:pt-32 pb-16 md:pb-24">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-light mb-4">
-            Innovation Strategy &amp; AI Advisory
+            Healthcare Innovation &amp; AI Advisory
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
-            Bridging cutting-edge technology and{" "}
-            <span className="text-primary">real-world outcomes</span>
+            Innovation hits the ground running and the{" "}
+            <span className="text-primary">P&amp;L in record time</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            I help organisations translate emerging technologies — AI, data,
-            digital health — into actionable strategies that drive measurable
-            results. From boardroom advisory to hands-on delivery.
+            I compress months of stakeholder wrangling and product uncertainty
+            into days of decisive progress — blending healthcare insight,
+            cross-industry creativity, and relentless execution.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild size="lg">
@@ -44,19 +44,19 @@ export default function Home() {
               icon: Zap,
               title: "Speed to Value",
               description:
-                "Rapid prototyping and iterative delivery. From insight to impact in weeks, not quarters.",
+                "10-day virtual hackathons, pandemic pivots, prototype-to-pilot sprints. I move fast — from insight to impact in weeks, not quarters.",
             },
             {
               icon: Sparkles,
-              title: "Deep Credibility",
+              title: "30+ Years Credibility",
               description:
-                "Two decades of experience across insurance, health tech, longevity, and digital innovation.",
+                "25 years managing elderly care, five international health events, seven companies launched from hackathons. Frontline to boardroom fluency.",
             },
             {
               icon: Users,
               title: "Knowledge Transfer",
               description:
-                "I build capabilities, not dependencies. Every engagement leaves your team stronger.",
+                "I build capabilities, not dependencies. Every engagement is designed to leave your team more capable, not more dependent.",
             },
           ].map(({ icon: Icon, title, description }) => (
             <div key={title} className="flex gap-4">
