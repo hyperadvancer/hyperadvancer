@@ -114,14 +114,28 @@ export default function Home() {
             Weekly insights on innovation strategy, AI in practice, and the
             longevity economy. No fluff, just signal.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Button
               asChild
               size="lg"
               variant="secondary"
               className="text-primary font-semibold"
             >
-              <Link href="/contact">Subscribe to the newsletter</Link>
+              <a
+                href="https://www.linkedin.com/newsletters/7183940717071736832/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Subscribe on LinkedIn <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+            >
+              <Link href="/feed.xml">RSS Feed</Link>
             </Button>
           </div>
         </div>
