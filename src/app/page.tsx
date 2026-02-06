@@ -1,65 +1,123 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Sparkles, Zap, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Section, SectionHeader } from "@/components/section";
+import { ProjectCard } from "@/components/project-card";
+import { featuredProjects } from "@/lib/projects";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero */}
+      <Section className="pt-24 md:pt-32 pb-16 md:pb-24">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary-light mb-4">
+            Innovation Strategy &amp; AI Advisory
           </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+            Bridging cutting-edge technology and{" "}
+            <span className="text-primary">real-world outcomes</span>
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
+            I help organisations translate emerging technologies — AI, data,
+            digital health — into actionable strategies that drive measurable
+            results. From boardroom advisory to hands-on delivery.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button asChild size="lg">
+              <Link href="/contact">
+                Work with me <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/about">Learn more</Link>
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      {/* Differentiators */}
+      <Section className="bg-white border-y">
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Zap,
+              title: "Speed to Value",
+              description:
+                "Rapid prototyping and iterative delivery. From insight to impact in weeks, not quarters.",
+            },
+            {
+              icon: Sparkles,
+              title: "Deep Credibility",
+              description:
+                "Two decades of experience across insurance, health tech, longevity, and digital innovation.",
+            },
+            {
+              icon: Users,
+              title: "Knowledge Transfer",
+              description:
+                "I build capabilities, not dependencies. Every engagement leaves your team stronger.",
+            },
+          ].map(({ icon: Icon, title, description }) => (
+            <div key={title} className="flex gap-4">
+              <div className="flex-shrink-0 mt-1">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground">{title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </Section>
+
+      {/* Featured Projects */}
+      <Section>
+        <SectionHeader
+          title="Featured Work"
+          subtitle="A selection of recent projects spanning AI strategy, data engineering, and digital products."
+        />
+        <div className="grid md:grid-cols-3 gap-6">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Button asChild variant="outline">
+            <Link href="/projects">
+              View all projects <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </Section>
+
+      {/* Newsletter CTA */}
+      <Section className="bg-primary text-primary-foreground">
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Stay ahead of the curve
+          </h2>
+          <p className="mt-4 text-primary-foreground/80 text-lg">
+            Weekly insights on innovation strategy, AI in practice, and the
+            longevity economy. No fluff, just signal.
+          </p>
+          <div className="mt-8">
+            <Button
+              asChild
+              size="lg"
+              variant="secondary"
+              className="text-primary font-semibold"
+            >
+              <Link href="/contact">Subscribe to the newsletter</Link>
+            </Button>
+          </div>
+        </div>
+      </Section>
+    </>
   );
 }
