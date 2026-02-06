@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="flex items-center gap-2 text-lg font-bold tracking-tight text-primary"
+              className="flex items-center gap-2 text-lg font-bold tracking-tight text-accent"
             >
               <Image src="/h-mark.png" width={24} height={24} alt="" className="rounded" />
               Hyperadvancer
