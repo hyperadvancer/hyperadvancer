@@ -173,8 +173,8 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10"
+              variant="secondary"
+              className="text-primary font-semibold"
             >
               <Link href="/blog">Read the Blog</Link>
             </Button>
