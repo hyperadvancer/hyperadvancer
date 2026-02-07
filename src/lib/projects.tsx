@@ -25,6 +25,8 @@ export const projects: Project[] = [
       "Self-care, wellness, fitness, and mental health are converging into one of the fastest-growing consumer trends. Healthusiasm Lab brings together partners from related and adjacent industries — healthcare, hospitality, insurance, retail, tech — to explore unexpected synergies. Curated experience days and workshops turn cross-sector introductions into concrete partnership opportunities.",
     tags: ["Health Tech", "Consultancy", "Diagnostics"],
     icon: "HeartPulse",
+    image: "/projects/healthusiasm-lab.jpg",
+    imageContain: true,
   },
   {
     title: "Major Health Insurer — AI Innovation Lab",
@@ -32,6 +34,7 @@ export const projects: Project[] = [
       "Designed a skunkworks-style innovation unit for one of Europe's largest health insurers. Two-track approach: rapid 4-week experiment sprints for prototyping, plus a studio track for training internal teams, building an AI app store, and running hackathons. The insurer already deploys AI at scale; the innovation lab adds velocity and structured experimentation.",
     tags: ["AI Strategy", "Insurance", "Enterprise", "Skunkworks"],
     icon: "Rocket",
+    image: "/projects/major-insurer-innovation-lab.jpg",
   },
   {
     title: "Accelerating Digital Health Innovation",
@@ -39,6 +42,8 @@ export const projects: Project[] = [
       "Co-founded HealthStartup and launched five landmark European digital health accelerator events, building the EU's first dedicated digital health innovation community. Connected startups with corporates, clinicians, and policymakers to fast-track collaboration and venture creation.",
     tags: ["Digital Health", "Accelerator", "Community", "Events"],
     icon: "Stethoscope",
+    image: "/projects/healthstartup-europe.jpg",
+    imageContain: true,
   },
   {
     title: "Reviving Healthcare Networks",
@@ -46,6 +51,7 @@ export const projects: Project[] = [
       <>Revitalised a large healthcare provider network of <a href="https://www.in4care.be/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">In4care</a> through new event formats — Pilots tables, Transformer Summit, DEBBI, and Health Arena concepts. Successfully pivoted all formats to virtual delivery within weeks when COVID-19 struck, maintaining community engagement and strategic momentum.</>,
     tags: ["Healthcare", "Networks", "Events", "COVID Pivot"],
     icon: "Network",
+    image: "/projects/in4care-reviving.jpg",
   },
   {
     title: "Strategic Innovation Guidance",
@@ -53,13 +59,16 @@ export const projects: Project[] = [
       <>Advisory engagements in collaboration with <a href="https://www.healthskouts.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Healthskouts</a> spanning government, corporate, and hospital sectors: delivered IPCEI funding strategy to the Flemish government, reimagined McKesson&apos;s pharmacy services, transformed hospital spaces in Antwerp, and facilitated shark-tank innovation events for major pharmaceutical companies.</>,
     tags: ["Advisory", "Strategy", "Government", "Pharma"],
     icon: "Compass",
+    image: "/projects/healthskouts-advisory.jpg",
+    imageContain: true,
   },
   {
     title: "GitLab Innovation Launchpad",
     description:
-      "Created GitLab's inaugural Pitch Innovation Competition, establishing a structured framework for teams to surface, validate, and prototype new offerings. Elevated platform quality, expanded the component catalogue, and strengthened community engagement through competitive innovation.",
+      <>Created <a href="https://about.gitlab.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">GitLab</a>&apos;s inaugural Pitch Innovation Competition, establishing a structured framework for teams to surface, validate, and prototype new offerings. Elevated platform quality, expanded the component catalogue, and strengthened community engagement through competitive innovation.</>,
     tags: ["Innovation", "Enterprise", "DevOps", "Competition"],
     icon: "Lightbulb",
+    image: "/projects/gitlab-innovation.jpg",
   },
   {
     title: "Generative AI Bootcamp",
@@ -67,6 +76,7 @@ export const projects: Project[] = [
       "Intensive training programme for various teams covering practical generative AI capabilities, process analysis, skills building, prompt engineering, and responsible deployment strategies. Delivered tailored workshops and strategic guidance enabling rapid adoption and immediate operational improvements.",
     tags: ["Generative AI", "Training", "Workshop", "Enterprise"],
     icon: "GraduationCap",
+    image: "/projects/generative-ai-bootcamp.jpg",
   },
   {
     title: "Wellness Market Strategy",
@@ -74,6 +84,8 @@ export const projects: Project[] = [
       "Comprehensive market research and trend analysis for a stealth hospitality startup assessing growth potential across fitness, wellness, and longevity markets. Delivered technology blueprint, and an actionable business development roadmap with positioning, competitive landscape, and targeted market entry strategies.",
     tags: ["Strategy", "Wellness", "Market Research", "Longevity"],
     icon: "Leaf",
+    image: "/projects/wellness-lumera.jpg",
+    imageContain: true,
   },
 ];
 

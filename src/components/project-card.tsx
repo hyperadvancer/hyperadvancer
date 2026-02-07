@@ -14,6 +14,7 @@ import {
   Stethoscope,
   type LucideIcon,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -44,6 +45,7 @@ export interface Project {
   highlight?: boolean;
   icon?: string;
   image?: string;
+  imageContain?: boolean;
 }
 
 function CardInner({
@@ -54,6 +56,7 @@ function CardInner({
   highlight,
   icon,
   image,
+  imageContain,
 }: Project) {
   const IconComponent = icon ? iconMap[icon] : null;
 
@@ -64,13 +67,16 @@ function CardInner({
       }`}
     >
       {image ? (
-        <div className="relative h-48 overflow-hidden rounded-t-xl">
+        <div className={cn(
+          "relative h-48 overflow-hidden rounded-t-xl",
+          imageContain && "bg-gradient-to-br from-primary/[0.06] to-primary-light/[0.08] p-6"
+        )}>
           <Image
             src={image}
             alt={title}
             fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover object-top"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className={imageContain ? "object-contain" : "object-cover object-top"}
           />
         </div>
       ) : IconComponent ? (
