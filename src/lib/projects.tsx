@@ -7,7 +7,6 @@ export const projects: Project[] = [
       "The definitive longevity event platform featuring hundreds of global events focused on active ageing, prevention, fitness, wellness, and healthspan optimisation. AI-powered data enrichment classifies speakers, sponsors, and session tracks automatically. Transitioning from a spreadsheet to a standalone revenue stream with quarterly trend reports.",
     tags: ["Next.js", "Supabase", "AI/ML", "Data Pipeline"],
     href: "https://longevents.hyperadvancer.com",
-    highlight: true,
     icon: "Calendar",
   },
   {
