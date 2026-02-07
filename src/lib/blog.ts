@@ -35,6 +35,26 @@ export function getFeaturedPosts(): BlogPost[] {
   return getAllPosts().filter((p) => p.featured);
 }
 
+export function getAdjacentPosts(slug: string): {
+  prev: { slug: string; title: string } | null;
+  next: { slug: string; title: string } | null;
+} {
+  const posts = getAllPosts();
+  const index = posts.findIndex((p) => p.slug === slug);
+  if (index === -1) return { prev: null, next: null };
+
+  return {
+    prev:
+      index < posts.length - 1
+        ? { slug: posts[index + 1].slug, title: posts[index + 1].title }
+        : null,
+    next:
+      index > 0
+        ? { slug: posts[index - 1].slug, title: posts[index - 1].title }
+        : null,
+  };
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   const filePath = path.join(contentDir, `${slug}.mdx`);
   if (!fs.existsSync(filePath)) return null;

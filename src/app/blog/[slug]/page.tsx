@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/section";
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getAdjacentPosts, getAllPosts, getPostBySlug } from "@/lib/blog";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -38,6 +38,8 @@ export default async function BlogPost({ params }: Props) {
   const post = getPostBySlug(slug);
 
   if (!post) notFound();
+
+  const adjacent = getAdjacentPosts(slug);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -102,6 +104,39 @@ export default async function BlogPost({ params }: Props) {
             <MDXRemote source={post.content} />
           </div>
         </article>
+
+        {(adjacent.prev || adjacent.next) && (
+          <nav className="mt-12 flex items-start justify-between gap-8 border-t border-border pt-8">
+            {adjacent.prev ? (
+              <Link
+                href={`/blog/${adjacent.prev.slug}`}
+                className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                <ArrowLeft className="h-4 w-4 shrink-0" />
+                <div>
+                  <div className="font-medium">Previous</div>
+                  <div className="line-clamp-1">{adjacent.prev.title}</div>
+                </div>
+              </Link>
+            ) : (
+              <div />
+            )}
+            {adjacent.next ? (
+              <Link
+                href={`/blog/${adjacent.next.slug}`}
+                className="group flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors text-right"
+              >
+                <div>
+                  <div className="font-medium">Next</div>
+                  <div className="line-clamp-1">{adjacent.next.title}</div>
+                </div>
+                <ArrowRight className="h-4 w-4 shrink-0" />
+              </Link>
+            ) : (
+              <div />
+            )}
+          </nav>
+        )}
       </div>
     </Section>
   );
