@@ -8,6 +8,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Supabase", "AI/ML", "Data Pipeline"],
     href: "https://longevents.hyperadvancer.com",
     icon: "Calendar",
+    image: "/projects/longevity-events.jpg",
   },
   {
     title: "Innovation Ecosystem Roulette",
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     tags: ["AI", "Matchmaking", "Lead Generation"],
     href: "https://roulette.hyperadvancer.com",
     icon: "Shuffle",
+    image: "/projects/venture-roulette.jpg",
   },
   {
     title: "Healthusiasm Lab",
@@ -76,7 +78,7 @@ export const projects: Project[] = [
 ];
 
 export const featuredProjects = [
-  projects.find((p) => p.title === "Generative AI Bootcamp")!,
-  projects.find((p) => p.title === "Wellness Market Strategy")!,
   projects.find((p) => p.title === "Longevity Events Calendar")!,
+  projects.find((p) => p.title === "Innovation Ecosystem Roulette")!,
+  projects.find((p) => p.title === "Major Health Insurer — AI Innovation Lab")!,
 ];

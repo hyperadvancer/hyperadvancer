@@ -40,52 +40,52 @@ const personJsonLd = {
 
 const services = [
   {
-    name: "Innovation Flash-Diagnosis",
-    duration: "2-week sprint",
-    description:
-      "Rapid outside-in assessment delivering an organisational readiness scorecard, bottleneck map, and top 3 quick wins with implementation pathways.",
+    name: "Rapid Assessment & Strategy",
+    duration: "2–4 weeks",
+    summary:
+      "Fast, outside-in diagnosis of your innovation readiness — paired with cross-industry inspiration to unlock new directions.",
+    deliverables: [
+      "Organisational readiness scorecard and bottleneck map",
+      "Top 3 quick wins with implementation pathways",
+      "Curated cross-industry case studies and partner introductions",
+      "Translate-to-your-context workshop (2 days)",
+    ],
   },
   {
-    name: "Accelerator in-a-Box",
-    duration: "6 weeks + 1 event day",
-    description:
-      "Full hackathon format without internal capacity: concept design, speaker curation, facilitator playbook, and post-event venturing report.",
+    name: "Hackathons & Accelerators",
+    duration: "10 days – 6 weeks",
+    summary:
+      "End-to-end innovation event formats — from rapid remote sprints to full-scale accelerator programmes with post-event venturing support.",
+    deliverables: [
+      "Challenge framing, concept design, and speaker curation",
+      "Facilitator playbook and mentoring programme",
+      "Platform setup, daily standups, and judging",
+      "Post-event incubation follow-up and venturing report",
+    ],
   },
   {
-    name: "AI Process-Automation",
-    duration: "Project-based",
-    description:
-      "Operational deep-dive, personalised automation roadmap, team training workshops, and strategic implementation guidance.",
+    name: "AI & Automation",
+    duration: "Project-based / 3-month agile",
+    summary:
+      "From operational deep-dives to working prototypes — practical AI implementation that moves from roadmap to pilot.",
+    deliverables: [
+      "Personalised automation roadmap and team training",
+      "Customer discovery and clickable prototype",
+      "Lean business case and pilot-site onboarding plan",
+      "Strategic implementation guidance throughout",
+    ],
   },
   {
-    name: "Prototype-to-Pilot",
-    duration: "3-month agile",
-    description:
-      "Customer discovery, clickable prototype, lean business case, and pilot-site onboarding plan. From idea to MVP.",
-  },
-  {
-    name: "Innovation Ops Interim Lead",
-    duration: "6–12 months",
-    description:
-      "Fractional or full-time innovation leadership: roadmap execution, KPI monitoring, coaching, and transition planning.",
-  },
-  {
-    name: "Board-Level Advisor",
-    duration: "Quarterly retainer",
-    description:
-      "Quarterly trend briefings, technology and partnership scouting, speaking and PR support for boards seeking foresight.",
-  },
-  {
-    name: "Cross-Industry Inspiration Safari",
-    duration: "4 weeks + 2-day workshop",
-    description:
-      "Curated case studies from non-traditional sources, partner introductions, and a translate-to-your-context workshop.",
-  },
-  {
-    name: "Virtual Hackathon Turbo",
-    duration: "10-day remote sprint",
-    description:
-      "Platform setup, challenge framing, daily standups, mentoring, judging, and post-event incubation follow-up.",
+    name: "Leadership & Advisory",
+    duration: "Quarterly retainer – 12 months",
+    summary:
+      "Fractional innovation leadership or board-level advisory — embedding strategic foresight and execution capability into your organisation.",
+    deliverables: [
+      "Innovation roadmap execution and KPI monitoring",
+      "Coaching, capability building, and transition planning",
+      "Quarterly trend briefings and technology scouting",
+      "Partnership scouting, speaking, and PR support",
+    ],
   },
 ];
 
@@ -115,8 +115,15 @@ export default function About() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -z-10"
         >
-          <div className="absolute -top-24 -right-24 h-[500px] w-[500px] rounded-full bg-primary/[0.04] blur-3xl" />
-          <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-primary-light/[0.06] blur-3xl" />
+          <div className="absolute -top-20 -right-20 h-[600px] w-[200px] rotate-12 bg-brand-accent/[0.06]" />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, var(--foreground) 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
+            }}
+          />
         </div>
         <div className="flex flex-col md:flex-row md:items-start gap-10 md:gap-16">
           <div className="flex-1 max-w-3xl">
@@ -248,20 +255,37 @@ export default function About() {
         <SectionHeader
           title="Service Packages"
           subtitle="Flexible engagement models — from a 2-week sprint to 12 months of fractional leadership."
+          accentDivider
         />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map(({ name, duration, description }) => (
+        <div className="grid sm:grid-cols-2 gap-6">
+          {services.map(({ name, duration, summary, deliverables }) => (
             <div
               key={name}
-              className="rounded-lg border bg-card p-5 hover:shadow-sm transition-shadow"
+              className="rounded-lg border bg-card p-6 hover:shadow-sm transition-shadow"
             >
-              <h3 className="font-semibold text-sm mb-1">{name}</h3>
-              <p className="text-xs text-primary-light font-medium mb-2">
+              <h3 className="font-semibold text-lg mb-1">{name}</h3>
+              <p className="text-sm text-brand-accent font-medium mb-3">
                 {duration}
               </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {description}
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                {summary}
               </p>
+              <details className="group">
+                <summary className="text-sm font-medium text-foreground cursor-pointer select-none hover:text-primary transition-colors">
+                  What&apos;s included
+                </summary>
+                <ul className="mt-3 space-y-2">
+                  {deliverables.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-accent" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </details>
             </div>
           ))}
         </div>

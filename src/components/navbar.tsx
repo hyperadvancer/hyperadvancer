@@ -23,6 +23,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
+      <div className="h-1 bg-brand-accent" aria-hidden="true" />
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-tight text-accent">
           <Image src="/h-mark.png" width={28} height={28} alt="" className="rounded" />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -42,6 +43,7 @@ export interface Project {
   href?: string;
   highlight?: boolean;
   icon?: string;
+  image?: string;
 }
 
 function CardInner({
@@ -51,6 +53,7 @@ function CardInner({
   href,
   highlight,
   icon,
+  image,
 }: Project) {
   const IconComponent = icon ? iconMap[icon] : null;
 
@@ -60,11 +63,21 @@ function CardInner({
         highlight ? "border-accent/30 bg-primary/[0.02]" : ""
       }`}
     >
-      {IconComponent && (
+      {image ? (
+        <div className="relative h-48 overflow-hidden rounded-t-xl">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-cover object-top"
+          />
+        </div>
+      ) : IconComponent ? (
         <div className="flex h-32 items-center justify-center rounded-t-xl bg-gradient-to-br from-primary/[0.06] to-primary-light/[0.08]">
           <IconComponent className="h-12 w-12 text-primary/40" strokeWidth={1.5} />
         </div>
-      )}
+      ) : null}
       <CardHeader>
         <CardTitle className="flex items-center justify-between text-lg">
           {title}

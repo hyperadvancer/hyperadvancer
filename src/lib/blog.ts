@@ -13,6 +13,7 @@ export interface BlogPost {
   tags: string[];
   readingTime: string;
   content: string;
+  featured: boolean;
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -28,6 +29,10 @@ export function getAllPosts(): BlogPost[] {
   return posts
     .filter((p): p is BlogPost => p !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getFeaturedPosts(): BlogPost[] {
+  return getAllPosts().filter((p) => p.featured);
 }
 
 export function getPostBySlug(slug: string): BlogPost | null {
@@ -46,5 +51,6 @@ export function getPostBySlug(slug: string): BlogPost | null {
     tags: data.tags ?? [],
     readingTime: stats.text,
     content,
+    featured: data.featured === true,
   };
 }

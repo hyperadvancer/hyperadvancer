@@ -7,6 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-accent: var(--brand-accent);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-manrope);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -50,6 +51,7 @@
 
 :root {
   --radius: 0.625rem;
+  --brand-accent: #E90502;
   --background: #F7F9FB;
   --foreground: #1a1a2e;
   --card: #FFFFFF;
@@ -85,6 +87,7 @@
 }
 
 .dark {
+  --brand-accent: #ff4444;
   --background: #0f1729;
   --foreground: #e2e8f0;
   --card: #1a2332;
@@ -129,4 +132,20 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-manrope);
   }
+  .prose blockquote {
+    border-left-color: var(--brand-accent);
+  }
+  .prose hr {
+    border-color: var(--brand-accent);
+    opacity: 0.3;
+  }
+  .prose a {
+    text-decoration-color: var(--brand-accent);
+    text-underline-offset: 3px;
+  }
+}
+
+.animate-in {
+  opacity: 1 !important;
+  translate: 0 0 !important;
 }

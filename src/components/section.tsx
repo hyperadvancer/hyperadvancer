@@ -21,14 +21,18 @@ interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   className?: string;
+  accentDivider?: boolean;
 }
 
-export function SectionHeader({ title, subtitle, className }: SectionHeaderProps) {
+export function SectionHeader({ title, subtitle, className, accentDivider }: SectionHeaderProps) {
   return (
     <div className={cn("mb-12", className)}>
       <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
         {title}
       </h2>
+      {accentDivider && (
+        <div className="mt-4 h-1 w-16 rounded-full bg-brand-accent" />
+      )}
       {subtitle && (
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
           {subtitle}

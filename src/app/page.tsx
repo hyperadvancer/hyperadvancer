@@ -3,20 +3,36 @@ import { ArrowRight, Sparkles, Zap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/section";
 import { ProjectCard } from "@/components/project-card";
+import { LogoStrip } from "@/components/logo-strip";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { featuredProjects } from "@/lib/projects";
+
+const stats = [
+  { value: "30+", label: "Years in Healthcare" },
+  { value: "7", label: "Companies Launched" },
+  { value: "300+", label: "Events Tracked" },
+  { value: "5", label: "International Conferences" },
+];
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <Section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
-        {/* Subtle gradient backdrop */}
+        {/* Geometric accent backdrop */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -z-10"
         >
-          <div className="absolute -top-24 -right-24 h-[500px] w-[500px] rounded-full bg-primary/[0.04] blur-3xl" />
-          <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-primary-light/[0.06] blur-3xl" />
+          <div className="absolute -top-20 -right-20 h-[600px] w-[200px] rotate-12 bg-brand-accent/[0.06]" />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, var(--foreground) 1px, transparent 1px)",
+              backgroundSize: "32px 32px",
+            }}
+          />
         </div>
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary-light mb-4">
@@ -85,15 +101,41 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Logo / Credibility Strip */}
+      <Section className="!py-10 md:!py-14">
+        <AnimateOnScroll>
+          <LogoStrip />
+        </AnimateOnScroll>
+      </Section>
+
+      {/* By the Numbers */}
+      <Section className="!py-10 md:!py-14 bg-card border-y">
+        <AnimateOnScroll>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map(({ value, label }) => (
+              <div key={label}>
+                <p className="text-4xl md:text-5xl font-heading font-bold text-brand-accent">
+                  {value}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{label}</p>
+              </div>
+            ))}
+          </div>
+        </AnimateOnScroll>
+      </Section>
+
       {/* Featured Projects */}
       <Section>
         <SectionHeader
           title="Featured Work"
           subtitle="A selection of recent projects spanning AI strategy, business development, and digital products."
+          accentDivider
         />
         <div className="grid md:grid-cols-3 gap-6">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {featuredProjects.map((project, i) => (
+            <AnimateOnScroll key={project.title} delay={i * 100}>
+              <ProjectCard {...project} />
+            </AnimateOnScroll>
           ))}
         </div>
         <div className="mt-8 text-center">
