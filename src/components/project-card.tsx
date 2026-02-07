@@ -76,7 +76,7 @@ function CardInner({
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className={imageContain ? "object-contain" : "object-cover object-top"}
+            className={imageContain ? "object-contain rounded-xl" : "object-cover object-top"}
           />
         </div>
       ) : IconComponent ? (
