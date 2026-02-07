@@ -106,19 +106,18 @@ export default function Home() {
       </Section>
 
       {/* Newsletter CTA */}
-      <Section className="bg-primary text-primary-foreground">
+      <Section className="!py-10 md:!py-14 bg-primary text-primary-foreground">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
             Stay ahead of the curve
           </h2>
-          <p className="mt-4 text-primary-foreground/80 text-lg">
+          <p className="mt-3 text-primary-foreground/80">
             Weekly inspiration on innovation strategy, AI in practice, and the
             longevity economy. No fluff, just signal.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Button
               asChild
-              size="lg"
               variant="secondary"
               className="text-primary font-semibold"
             >
@@ -132,11 +131,10 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              size="lg"
               variant="outline"
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
             >
-              <Link href="/feed.xml">RSS Feed</Link>
+              <Link href="/blog">Read the Blog</Link>
             </Button>
           </div>
         </div>
