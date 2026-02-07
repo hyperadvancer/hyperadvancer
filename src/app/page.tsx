@@ -89,7 +89,7 @@ export default function Home() {
       <Section>
         <SectionHeader
           title="Featured Work"
-          subtitle="A selection of recent projects spanning AI strategy, data engineering, and digital products."
+          subtitle="A selection of recent projects spanning AI strategy, business development, and digital products."
         />
         <div className="grid md:grid-cols-3 gap-6">
           {featuredProjects.map((project) => (
@@ -112,7 +112,7 @@ export default function Home() {
             Stay ahead of the curve
           </h2>
           <p className="mt-4 text-primary-foreground/80 text-lg">
-            Weekly insights on innovation strategy, AI in practice, and the
+            Weekly inspiration on innovation strategy, AI in practice, and the
             longevity economy. No fluff, just signal.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">

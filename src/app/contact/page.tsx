@@ -24,8 +24,8 @@ const contactMethods = [
   {
     icon: Twitter,
     label: "X / Twitter",
-    value: "@bartcollet",
-    href: "https://x.com/bartcollet",
+    value: "@bart",
+    href: "https://x.com/bart",
   },
   {
     icon: Calendar,
@@ -70,8 +70,9 @@ export default function Contact() {
             Looking for something specific?
           </h3>
           <p className="text-muted-foreground leading-relaxed">
-            I offer advisory engagements, innovation workshops, fractional
-            CTO/CDO services, and keynote speaking. Check the{" "}
+            I offer innovation strategy, automation advisory, business
+            development support, workshops, and fractional executive services
+            (development, innovation). Check the{" "}
             <a href="/about" className="text-primary hover:underline">
               About page
             </a>{" "}

@@ -17,7 +17,7 @@ const social = [
     icon: Linkedin,
   },
   {
-    href: "https://x.com/bartcollet",
+    href: "https://x.com/bart",
     label: "X / Twitter",
     icon: Twitter,
   },

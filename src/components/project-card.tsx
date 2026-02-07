@@ -37,7 +37,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export interface Project {
   title: string;
-  description: string;
+  description: React.ReactNode;
   tags: string[];
   href?: string;
   highlight?: boolean;
