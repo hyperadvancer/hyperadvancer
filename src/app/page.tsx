@@ -9,7 +9,7 @@ import { featuredProjects } from "@/lib/projects";
 
 const stats = [
   { value: "30+", label: "Years in Healthcare" },
-  { value: "7", label: "Companies Launched" },
+  { value: "7", label: "Companies Spawned" },
   { value: "300+", label: "Events Tracked" },
   { value: "5", label: "International Conferences" },
 ];
@@ -174,7 +174,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-white/30 text-white hover:bg-white/10"
             >
               <Link href="/blog">Read the Blog</Link>
             </Button>
