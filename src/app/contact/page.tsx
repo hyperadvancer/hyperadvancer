@@ -31,7 +31,7 @@ const contactMethods = [
     icon: Calendar,
     label: "Book a Call",
     value: "Schedule a 30-minute intro call",
-    href: "https://cal.com/bartcollet",
+    href: "https://cal.eu/bartcollet",
   },
 ];
 
