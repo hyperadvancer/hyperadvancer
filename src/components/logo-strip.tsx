@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const logos = [
-  { name: "SXSW", src: "/logos/sxsw.svg", width: 122, height: 28 },
-  { name: "In4Care", src: "/logos/in4care.png", width: 120, height: 28 },
-  { name: "GitLab", src: "/logos/gitlab.svg", width: 73, height: 28 },
-  { name: "McKesson", src: "/logos/mckesson.svg", width: 157, height: 28 },
-  { name: "CM", src: "/logos/cm.png", width: 28, height: 28 },
-  { name: "UCB Pharma", src: "/logos/ucb-pharma.png", width: 68, height: 28 },
-  { name: "Microsoft", src: "/logos/microsoft.svg", width: 28, height: 28 },
-  { name: "ICT&Health", src: "/logos/ict-health.svg", width: 143, height: 28 },
+  { name: "SXSW", src: "/logos/sxsw.svg", width: 87, height: 20, h: "h-5" },
+  { name: "In4Care", src: "/logos/in4care.png", width: 120, height: 28, h: "h-7" },
+  { name: "GitLab", src: "/logos/gitlab.svg", width: 94, height: 36, h: "h-9" },
+  { name: "McKesson", src: "/logos/mckesson.svg", width: 200, height: 36, h: "h-9" },
+  { name: "CM", src: "/logos/cm.png", width: 32, height: 32, h: "h-8" },
+  { name: "UCB Pharma", src: "/logos/ucb-pharma.png", width: 68, height: 28, h: "h-7" },
+  { name: "Microsoft", src: "/logos/microsoft.svg", width: 32, height: 32, h: "h-8" },
+  { name: "ICT&Health", src: "/logos/ict-health.svg", width: 143, height: 28, h: "h-7" },
 ];
 
 export function LogoStrip() {
@@ -25,7 +25,7 @@ export function LogoStrip() {
             alt={item.name}
             width={item.width}
             height={item.height}
-            className="h-7 w-auto dark:brightness-0 dark:invert opacity-40 hover:opacity-60 transition-opacity"
+            className={`${item.h} w-auto dark:brightness-0 dark:invert opacity-40 hover:opacity-60 transition-opacity`}
           />
         ))}
       </div>
